@@ -66,4 +66,20 @@ public class MyLinkedList {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
+
+    public<K> INode search(K nodeValue) {
+        INode currentNode=head;
+        int i=1;
+        if(this.head==null)
+            System.out.println("Linked Lst is empty");
+        else {
+            while(currentNode!=null) {
+                if(currentNode.getKey()==nodeValue)
+                    return currentNode;
+                i++;
+                currentNode=currentNode.getNext();
+            }
+        }
+        return currentNode;
+    }
 }
